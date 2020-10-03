@@ -1,0 +1,13 @@
+{
+  "name": "centering-a-div",
+  "version": "1.0.0",
+  "description": "centering a `<div>`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "export PORT=3003 && python -m http.server $PORT"
+  },
+  "keywords": [],
+  "author": "nerdfiles",
+  "license": "WTFPL"
+}

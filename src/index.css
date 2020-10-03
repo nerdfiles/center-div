@@ -1,0 +1,28 @@
+/**
+ * @name solution.1
+ */
+.centered-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 768px;
+  height: 1024px;
+
+  outline: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+
+/**
+ * @name solution.2
+ */
+html, body { height: 100%; }
+.container { height: 100%; }
+.centered-div-without-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  outline: 1px solid silver;
+  border-bottom: 1px solid silver;
+}

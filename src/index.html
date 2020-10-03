@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="" charset="UTF-8" />
+  <title>centering a `&lt;div&gt;`</title>
+  <link rel="stylesheet" href="./index.css" media="all" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <!--
+      so we've created a container. the first question is *what* are we 
+      centering. are we "centering a `<div>`"? some might say that it is plain 
+      that we are, but what does this statement mean? is a "`<div>`" is tag or 
+      its element? surely, one could easily "center a `<div>`" this way:
+
+      ```
+        the developer's monitor:
+          _________________________________________________
+          |_ some editor __________________________________|
+          | </head>                                        |
+          | <body class="fancy web app">                   |
+          |                     <div>                      |
+          |                     </div>                     |
+          | </body>                                        |
+          | </html>                                        |
+          |                                                |
+          |                                                |
+          |                                                |
+          |                                                |
+          _________________________________________________
+      ```
+
+      but obviously this just won't do; the developer may have completely 
+      misunderstood what it means to design a page using style. we expect the 
+      HTML tags and the CSS selectors to be combined in a special way by the 
+      browser and applied together. but in that combination we find that we 
+      are not merely "centering a `<div>`", but centering *something* whatever 
+      a `<div>` may be adequate to represent either in the application or 
+      presentation layer (OSI), or adaptive semiotic (semantic layer of 
+      the OSI model). what do we want to see on a screen, an apple? then 
+      perhaps a `<div>` is fitting, but a modal window? most probably we 
+      may find ourselves "centering" a `<dialog>` or something else, 
+      and the way we go about it will certainly assume certain capabilities
+      of the device capable, supposedly, of receiving such presentation 
+      layer code that it actually renders in some obviously correct output.
+      `position`? `transform`? what's sufficient?
+    -->
+
+      <div class="centered-div">
+        cats
+      </div>
+
+    <!--
+      with something as simple as the above we see that the problem isn't 
+      achieving the "centering" of a "`<div>`" but rather the consequence of 
+      centering a `<div>` in such a way as that which uses the `position` 
+      property. but must we use the position property?
+    -->
+
+      <div class="centered-div-without-position">
+        <div>dogs</div>
+      </div>
+
+    <!--
+      there are a couple of things to notice here; namely, the existing 
+      `.centered-div` solution has been unaffected, and secondly the 
+      non-position-al solution requires a lot more code. or does it? 
+      it's one more line, and really, the `html`, `body` and `.container` 
+      could all technically be expressed in one line as a "setup" for this
+      strategy itself. in any case, we call for flex, but fewer properties, 
+      not needing to set the `width` at all, obviously.
+    -->
+
+    <!--
+      why should we choose one over the other? well, one has wider browder support.
+      and they both avoid using JavaScript. but why shouldn't we use JavaScript, or 
+      rather, whichever method that we decide to use, is it important to figure out 
+      if it works with JavaScript under the right circumstances, and if so, are some 
+      of those circumstances ruling out of certain CSS properties for performance or 
+      capability reasons.
+    -->
+
+    <!--
+      but then there's the meaning of the style itself. what is "flex" 
+      supposedly "flexing"? is it the box model, is it the element itself? the 
+      DOM? is it the actual tag on your screen in accordance with your visual 
+      intuition? what's the physics by which flex-ation is measured such that i 
+      can determine how the interactions of other elements will play out? is 
+      "physics" even the right conceptual scheme to deploy when understanding 
+      these elements? when i say "the `<div>` there" do i mean to imply an 
+      object that obeys the DOM, HTML, my intuition, the design or style guide, 
+      the physical laws of nature or the norms of typesetting? particularly 
+      when i say "center" it? is centering a `<div>` like how god would center 
+      an apple, with `position` or would god `flex` out the environment? where,
+      and why? these are the kinds of questions we may wonder: do we "center" a 
+      modal window by positioning it, or by adapting the environment to let it 
+      center like a text object? is a modal window more like a text object or 
+      something that you `position` like you would a physical object in JS?
+      these are the fundamental questions relating to "what" it is that is being 
+      centered before we decide "how" it is we go about "centering a `<div>`"
+    -->
+
+    <!--
+      aside from the wildly interpretative agreement that is required to even 
+      say which "say" counts as the quintessential one. should the solution
+      basically adapt to the page? should there be side-effects, like overflowing
+      the page? perhaps in a physical environment, such information is relevant, 
+      where in a "document flow" (DOM) style setting, such physical information 
+      would represent a broken page or disrupted document flow algorithm. but there 
+      are many: flow, `flex`, `grid`, those implicit in the likes of `<table>` 
+      and `<ul>`; none of which behave like a `position: relative` in its 
+      relation to its parent `position: absolute`, except maybe sometimes: 
+      flex items will appear inside their parent by their left and right 
+      position are usually defined with priority relative to each other rather 
+      than to their parent.
+
+      and nothing, by the way, says we cannot add a `<div>` in order to achieve 
+      centering "a `<div>`"; why should one element by necessary and 
+      sufficient for the task? what if another element adequately expresses 
+      the complexity of the concept being represented? is the extra element 
+      really a cost, anyway? could we not apply the solution itself without the 
+      extra element anyway, applying `flex` to the `.container`? would the other 
+      solution be in disrepair if so? how to emend, if so?
+    -->
+  </div>
+</body>
+</html>
